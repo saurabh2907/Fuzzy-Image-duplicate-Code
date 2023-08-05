@@ -86,10 +86,15 @@ if __name__ == "__main__":
     ]
 
     print("Duplicate images:")
-    print(duplicate_images)
-    print(len(duplicate_images))
+    for image_file in duplicate_images:
+        image_path = os.path.join(folder_path, image_file)
+        print(image_path)
+
+    print("Total duplicate images:", len(duplicate_images))
     print("Similar images:")
-    print(similar_images)
+    for image_file in similar_images:
+        image_path = os.path.join(folder_path, image_file)
+        print(image_path)
 
     # Display the duplicate images using Matplotlib
     num_cols = 4  # Number of columns in the grid
